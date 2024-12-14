@@ -1,0 +1,100 @@
+body {
+  background: linear-gradient(45deg, #ff3366, #33ccff); /* Gradiente de fundo diagonal */
+  height: 100vh; /* Altura da tela inteira */
+  color: #ffffff; /* Cor do texto */
+  text-align: center; /* Alinha o texto ao centro */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte da página */
+  display: flex; /* Usando Flexbox para centralizar o conteúdo */
+  justify-content: center; /* Alinha horizontalmente ao centro */
+  align-items: center; /* Alinha verticalmente ao centro */
+  min-height: 100vh; /* Garante que o body ocupe pelo menos a altura total da tela */
+}
+
+/* Estilo da caixa principal da calculadora */
+.box {
+  background-color: #222222; /* Cor de fundo da caixa */
+  padding: 30px; /* Espaçamento interno */
+  border-radius: 20px; /* Cantos arredondados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra suave em torno da caixa */
+}
+
+/* Estilo do título */
+h1 {
+  font-size: 2.5rem; /* Tamanho da fonte */
+  color: #ffeb3b; /* Cor amarela */
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+  text-shadow: 2px 2px #ff4081; /* Sombra no texto do título */
+}
+
+/* Estilo para os botões */
+button {
+  width: 60px; /* Largura do botão */
+  height: 60px; /* Altura do botão */
+  font-size: 28px; /* Tamanho da fonte do texto */
+  cursor: pointer; /* Aparece o cursor de mão ao passar sobre o botão */
+  border: none; /* Remove a borda */
+  background-color: #ff4081; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto */
+  border-radius: 15px; /* Cantos arredondados */
+  transition: transform 0.3s, background-color 0.2s; /* Animação suave para o botão */
+}
+
+/* Efeito de hover (passar o mouse por cima) nos botões */
+button:hover {
+  background-color: #f50057; /* Cor de fundo muda para um tom mais escuro de rosa */
+  transform: translateY(-10px); /* O botão sobe levemente */
+}
+
+/* Efeito de active (clicar no botão) */
+button:active {
+  transform: translateY(5px); /* O botão desce levemente */
+}
+
+/* Remove o outline (bordas azuis) nos botões quando são clicados */
+button:focus {
+  outline: none;
+}
+
+/* Estilo do botão de igual */
+.equals-btn {
+  background-color: #18b024; /* Cor de fundo verde */
+  font-size: 36px; /* Tamanho maior para o botão de igual */
+}
+
+/* Efeito de hover no botão de igual */
+.equals-btn:hover {
+  background-color: #00e676; /* Cor de fundo muda para verde mais claro */
+}
+
+/* Estilo do botão 0 */
+.zero-btn {
+  width: 120px; /* A largura do botão 0 é maior */
+}
+
+/* Estilo da área onde o resultado será exibido */
+.tela {
+  background-color: #333; /* Cor de fundo da tela */
+  height: 60px; /* Altura da tela */
+  color: #ffeb3b; /* Cor amarela para o texto */
+  font-size: 35px; /* Tamanho do texto */
+  text-align: end; /* Alinha o texto à direita */
+  margin-bottom: 15px; /* Espaçamento abaixo da tela */
+  border-radius: 15px; /* Cantos arredondados */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #ff4081; /* Borda rosa ao redor da tela */
+}
+
+/* Estilo do texto de copyright */
+span {
+  font-size: 14px; /* Tamanho pequeno para o texto de copyright */
+  color: #ffeb3b; /* Cor amarela */
+  display: block; /* Exibe o texto em bloco (em uma nova linha) */
+  margin-top: 10px; /* Espaçamento acima do texto */
+}
+
+/* Animação bounce (pular) */
+@keyframes bounce {
+  0% { transform: translateY(0); } /* Começa sem movimento */
+  50% { transform: translateY(-10px); } /* Sobe 10px no meio da animação */
+  100% { transform: translateY(0); } /* Retorna para a posição inicial */
+}

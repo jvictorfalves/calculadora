@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <link rel="stylesheet" href="style.css" /> 
+    <title>Calculadora </title> 
+  </head>
+  <body>
+    <div class="box"> 
+      <h1>Calculadora Do JV!</h1> <!-- Título da calculadora -->
+      
+      <main> <!-- Início do conteúdo principal da página -->
+        <div class="tela" aria-live="polite"></div> <!-- Div para exibir o resultado, com acessibilidade -->
+        <table> <!-- Tabela para organizar os botões -->
+          <tr> <!-- Primeira linha de botões -->
+            <td><button onclick="clean()">🧹</button></td> <!-- Botão para limpar a tela -->
+            <td><button onclick="back()">⬅️</button></td> <!-- Botão para apagar o último caractere -->
+            <td><button onclick="insert('/')">➗</button></td> <!-- Botão para divisão -->
+            <td><button onclick="insert('*')">✖️</button></td> <!-- Botão para multiplicação -->
+          </tr>
+          <tr> <!-- Segunda linha de botões -->
+            <td><button onclick="insert('7')">7</button></td> <!-- Botão para o número 7 -->
+            <td><button onclick="insert('8')">8</button></td> <!-- Botão para o número 8 -->
+            <td><button onclick="insert('9')">9</button></td> <!-- Botão para o número 9 -->
+            <td><button onclick="insert('-')">➖</button></td> <!-- Botão para subtração -->
+          </tr>
+          <tr> <!-- Terceira linha de botões -->
+            <td><button onclick="insert('4')">4</button></td> <!-- Botão para o número 4 -->
+            <td><button onclick="insert('5')">5</button></td> <!-- Botão para o número 5 -->
+            <td><button onclick="insert('6')">6</button></td> <!-- Botão para o número 6 -->
+            <td><button onclick="insert('+')">➕</button></td> <!-- Botão para adição -->
+          </tr>
+          <tr> <!-- Quarta linha de botões -->
+            <td><button onclick="insert('1')">1</button></td> <!-- Botão para o número 1 -->
+            <td><button onclick="insert('2')">2</button></td> <!-- Botão para o número 2 -->
+            <td><button onclick="insert('3')">3</button></td> <!-- Botão para o número 3 -->
+            <td rowspan="2"> <!-- Botão de igual ocupa duas linhas -->
+              <button class="equals-btn" onclick="calcular()">😎</button> <!-- Botão para calcular o resultado -->
+            </td>
+          </tr>
+          <tr> <!-- Linha para o número 0 e ponto decimal -->
+            <td colspan="2"><button class="zero-btn" onclick="insert('0')">0</button></td> <!-- Botão para o número 0 -->
+            <td><button onclick="insert('.')">.</button></td> <!-- Botão para o ponto decimal -->
+          </tr>
+        </table>
+      </main> <!-- Fim do conteúdo principal -->
+      
+      <span>&copy; JVDEV - Calculadora Do JV! </span> <!-- Rodapé com copyright -->
+    </div>
+  </body>
+  <script src="script.js"></script> <!-- Link para o arquivo JavaScript -->
+</html>
